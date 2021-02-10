@@ -1,0 +1,36 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template/scrolling-nav)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+header {
+  padding: 156px 0 100px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.chart-title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+a:focus, a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+a {
+  color: rgba(255, 255, 255, 0.25)
+}
+
+.endlink {
+  color: rgba(8, 48, 75, 0.75)
+}
+
+.endlink:hover, .endlink:focus {
+  color: rgba(8, 48, 75, 0.25)
+}
+
+.city-name {
+  font-weight: bold;
+}

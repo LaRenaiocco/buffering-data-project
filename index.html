@@ -21,6 +21,10 @@
   <script src="js/jquery/jquery.min.js"></script>
   <!-- <script src="js/markerData.js"></script> -->
   <script src="js/googleMaps.js"></script>
+  <!-- Chart.js Scripts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css" integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g==" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
+  </script>
 
 </head>
 
@@ -29,7 +33,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Coded by LaRena Iocco</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Once More With Scoobies</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -42,7 +46,7 @@
             <a class="nav-link js-scroll-trigger" href="#graphs">Graphs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">About the Dev</a>
           </li>
         </ul>
       </div>
@@ -52,12 +56,14 @@
   <header class="bg-primary text-white">
     <div class="container text-center">
       <h1>Once More With Scoobies</h1>
-      <p class="lead">Hello, LaRena here!  I'm a software engineer and an avid Buffy the Vampire Fan.
+      <p class="lead">Hello, LaRena here!  I'm a software engineer and an avid Buffy the Vampire Slayer Fan.
         I'm also a big fan and long time listener of the popular Buffy re-cap pod - Buffering the Vampire Slayer. 
         Perhaps the most iconic episode of Buffy is the musical episode (S06E7) - Once More With Feeling.  
-        For this important episode, Buffering hosted a  free live watch on Crowdcast that had over 1000 people sign up!
+        For this important episode, Buffering hosted a  free live watch on Crowdcast on 1/30/21 that had over 1000 viewers!
         So some data was gathered via an optional survey and here-in lies that data all visualized and beautiful for the world to see!
-        
+        <br>
+        Did you somehow stumble upon this project and you aren't familiar with Buffering the Vampire Slayer? 
+        You should <span><a href="https://www.bufferingthevampireslayer.com/">check them out.</a></span>
       </p>
     </div>
   </header>
@@ -65,15 +71,13 @@
   <section id="map">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>About this page</h2>
-          <!-- <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p> -->
-          <!-- <ul>
-            <li>Clickable nav links that smooth scroll to page sections</li>
-            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-          </ul> -->
+        <div class="col-lg-10 mx-auto">
+          <h2>Slayers are awakening everywhere...</h2>
+          <p class="lead">Over 500 people who participated in the livewatch completed the optional 
+            survey and we truly have slayers everywhere around the globe!
+            We stand up, we fight evil (and the patriarchy) daily, we watch a lot of Buffy.
+          </p>
+          <p>Zoom in, zoom out, explore. Can you find yourself?</p>
           <div id="map-parent">
             <div id="map-view"></div>
           </div>
@@ -85,9 +89,21 @@
   <section id="graphs" class="bg-light">
     <div class="container">
       <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>That'll put marzipan in your pie chart, Bingo!</h2>
+          <p class="lead">I like graphs!  Do you like graphs? I made you some graphs. Do you want more graphs?
+            Let me know what you'd like to see! Find my contact info below...
+          </p>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+          <p class="chart-title"><b>Scoobies of the World: 545 viewers from 21 countries</b></p>
+          <canvas id="worldchart" height="300" width="300"></canvas>
+          <p class="chart-title"><b>Scoobies of the United States: 376 viewers in 41 states and Washington D.C.</b></p>
+          <canvas id="uschart" height="300" width="300"></canvas>
+          <p class="chart-title"><b>Scoobies of Canada: 35 viewers in 7 provinces</b></p>
+          <canvas id="canchart"></canvas>
         </div>
       </div>
     </div>
@@ -96,9 +112,18 @@
   <section id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">This project was created by scoobie LaRena Iocco. I'm a software engineer and have been obsessed with Buffy since 1997</p>
+        <div class="col-lg-10 mx-auto">
+          <h2>About the Developer</h2>
+          <p class="lead">Created by scoobie LaRena Iocco. I'm a software engineer and have been obsessed with Buffy since 1997.
+            I built this little project using HTML, JavaScript and CSS along with the Google Maps JavaScript API, the Charts.JS library and Bootstrap. 
+          </p>
+          <p>
+            I have hopes of converting this to an Express.js app, but I am still struggling with some concepts in that framework, 
+            so if you happen to see this project and want to pair program with me on Express.js, I'd love to debug some things and learn from you!
+          </p>
+          <div>Source code can be found on my <span><a class ="endlink" href="https://github.com/LaRenaiocco/buffering-data-project">Github</a></span></div>
+          <div>You can learn more about me and some of the other projects I've built <a class ="endlink" href="https://larenaiocco.github.io/">here</a></div>
+          <div>Find a mistake?  Want more data visualizations? <span><a class ="endlink" href="mailto: rosie.mcqueen@gmail.com">Email Me</a></span></div>
         </div>
       </div>
     </div>
@@ -126,7 +151,7 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlRpSKbGF4uQK8ly2vkvxpp-MCkNvATJo&callback=initMap&libraries=&v=weekly"
   async
 ></script>
-
+<script src="js/charts.js"></script>
 </body>
 
 </html>
