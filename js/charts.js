@@ -9,7 +9,7 @@ const worldChart = new Chart($('#worldchart'), {
                 'Norway', 'Spain', 'Sweden', 'United Kingdom', 'United States'],
         datasets: [{
             label: 'Slayers of the World',
-            data: [11, 1, 1, 2, 35, 1, 2, 1, 3, 2, 9, 1, 3, 2, 3, 2, 2, 2, 20, 66, 376],
+            data: [11, 1, 1, 2, 35, 1, 2, 1, 3, 2, 9, 1, 3, 2, 3, 2, 2, 2, 20, 66, 377],
             backgroundColor: [
                 'rgba(252, 3, 223)',
                 'rgba(252, 3, 136)',
@@ -49,7 +49,7 @@ const USChart = new Chart($('#uschart'), {
                 'OK', 'OR', 'PA', 'RI', 'SC', 'TN', 'TX', 'UT', 'VA', 'VT', 
                 'WA', 'WI'],
         datasets: [{
-            data: [4, 47, 8, 10, 9, 2, 9, 4, 1, 3, 1, 23, 6, 1, 4, 1, 13, 9,
+            data: [4, 47, 8, 10, 9, 2, 9, 4, 1, 3, 1, 23, 6, 1, 4, 1, 13, 10,
                 5, 11, 10, 4, 12, 2, 2, 11, 3, 2, 34, 10, 1, 15, 22, 3, 3, 3,
                 17, 2, 10, 2, 24, 12],
             backgroundColor: [
