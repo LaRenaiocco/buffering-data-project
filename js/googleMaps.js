@@ -152,6 +152,15 @@ function initMap() {
 
   const markers = [
     {
+      "city": "Montgomry Village",
+      "state": "MD",
+      "zipcode": "20877",
+      "country": "United States",
+      "geo_input": "Montgomry Village,MD,20877,United States",
+      "lat": 39.1438746,
+      "lng": -77.2298165
+    },
+    {
       "city": "Melbourne",
       "state": "Victoria",
       "zipcode": "3044",
